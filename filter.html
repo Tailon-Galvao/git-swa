@@ -1,0 +1,42 @@
+<script>
+    var numero=[10,1,15,18];
+    var resultado=[];
+
+    for (i=0;i<numero.length;i++){
+        if (numero[i]>10){
+            resultado.push(numero[i]);
+        }
+
+    }
+    console.log(resultado);
+
+
+///******************************************
+//Primeira Forma
+var numero=[10,1,15,18];
+var maiorQue10 =function(item){
+    if(item>10){
+        return true;
+    }
+    else{
+        return false;
+    } 
+        
+}
+var novosNumeros = numero.filter(maiorQue10); //Basicamente o filter permite executar uma função de callback para cada elemento do array.
+console.log(novosNumeros);
+/*Ou seja, ele vai executar um for que a cada passada o vai executar a sua função. Bem útil quando
+  queremos analisar cada elemento e tomar uma ação de decisão sefica ou sai. */
+
+//Resumindo o codigo mais ainda
+
+var numero=[10,1,15,18];
+var novosNumeros = numero.filter(function(item){ //function é uma função anonima sem nomes, recebe um parametro item esse que e o indice do array
+    return item>10;
+});
+console.log(novosNumeros);
+
+//FILTER TRABALHA COM TEXTOS TBM AULTA FITLRANODO ARRAYS MINUTO 16:03
+
+
+</script>
